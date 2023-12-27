@@ -1,9 +1,12 @@
-import React, {useEffect} from "react";
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import axios from "axios";
 
 export default function Homepage() {
 	// http isteği
+
+	const [products, setProducts] = useState([])
 
 	useEffect(() => {
 		// gelen veriyi json olarak console'a yazdır.
@@ -14,23 +17,16 @@ export default function Homepage() {
 		// 	.catch(err => console.log(err));
 
 		//awaitFetch();
-		axiosGet();
 	}, []);
 
-	const awaitFetch = async () => {
-		let response = await fetch("https://dummyjson.com/products");
-		let json = await response.json();
-		console.log(json);
-	};
-
-	const axiosGet = async () => {
-		let response = await axios.get("https://dummyjson.com/products");
-		console.log(response.data);
-	};
 
 	return (
 		<div>
-			<Link to={"/products"}>Ürünler Sayfası</Link>
+			<Link to={"/products"}>
+			
+				Ürünler Sayfası
+		
+			</Link>
 		</div>
 	);
 }
