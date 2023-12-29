@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-import jQuery from "jquery";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Products from "./pages/Products/Products";
 import Homepage from "./pages/Homepage/Homepage";
