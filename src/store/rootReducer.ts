@@ -1,7 +1,9 @@
 import {combineReducers} from "redux";
-import {cartReducer} from "./reducers/cartReducer";
+import cartSlice from "./slices/cartSlice";
 
 // global depo
-export const rootReducer = combineReducers({
-	cart: cartReducer, //  global depo altındaki "cart" isimli alt depo
+const rootReducer = combineReducers({
+	cart: cartSlice, //  global depo altındaki "cart" isimli alt depo
 });
+
+export default rootReducer

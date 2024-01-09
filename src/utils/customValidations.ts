@@ -1,4 +1,4 @@
-import {AnyObject, TestContext} from "yup";
+import {AnyObject, TestContext} from "yup"
 
 export const passwordValidator = (
 	value: string,
